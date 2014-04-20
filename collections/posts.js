@@ -15,7 +15,7 @@ Posts.deny({
 Meteor.methods({
   post: function(postAttributes) {
     var user = Meteor.user(),
-    postWithSameLink = Posts.findOne({url: postAttributes.url});
+      postWithSameLink = Posts.findOne({url: postAttributes.url});
 
     // ensure the user is logged in
     if (!user)
